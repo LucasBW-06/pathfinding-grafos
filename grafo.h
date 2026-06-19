@@ -1,6 +1,7 @@
-#include <stdbool.h>
 #ifndef GRAFO_H
 #define GRAFO_H
+
+#include <stdbool.h>
 
 typedef struct Grafo Grafo;
 

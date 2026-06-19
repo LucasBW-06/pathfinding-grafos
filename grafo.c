@@ -57,10 +57,10 @@ void exibe_grafo(Grafo* g) {
     printf("Imprimindo grafo (vertices: %i; arestas %i).\n", g->numVertices, g->numArestas);
     ElemLista* atual;
     for (int i = 0; i < g->numVertices; i++) {
-        printf("[%2i]", i);
+        printf("[%i]", i);
         atual = g->A[i];
         while (atual) {
-            printf(" >>%.2f>>%3i", atual->peso, atual->vertice);
+            printf(" >>[%i]>> %i", atual->peso, atual->vertice);
             atual = atual->prox;
         }
         printf("\n");

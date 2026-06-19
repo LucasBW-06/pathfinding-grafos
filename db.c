@@ -33,7 +33,7 @@ bool ler_arestas_csv(Grafo *g, const char *nomeArquivo) {
         token = strtok(NULL, ",");
         if (!token) continue;
         peso = atoi(token);
-
+        
         inserir_aresta(g, origem, destino, peso);
     }
 

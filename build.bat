@@ -1,0 +1,3 @@
+@echo off
+@echo Compilando projeto...
+gcc main.c grafo.c db.c dijkstra.c -o programa.exe
