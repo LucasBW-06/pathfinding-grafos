@@ -4,6 +4,6 @@
 #include <stdbool.h>
 #include "grafo.h"
 
-bool ler_arestas_csv(Grafo *g, const char *nomeArquivo);
+bool ler_arestas_csv(Grafo *g);
 
 #endif

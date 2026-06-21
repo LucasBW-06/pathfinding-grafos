@@ -93,8 +93,9 @@ void dijkstra(Grafo* g, int origem, int destino) {
     if (distancia[destino] == -1) {
         printf("Nao existe caminho\n");
     } else {
-        printf("Distancia: %i\n", distancia[destino]);
+        printf("\nMenor caminho: ");
         imprimir_caminho(origem, destino, pai);
+        printf("\nDistancia total: %i\n", distancia[destino]);
     }
 
     free(distancia);

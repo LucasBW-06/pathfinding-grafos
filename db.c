@@ -5,8 +5,8 @@
 #include "db.h"
 #include "grafo.h"
 
-bool ler_arestas_csv(Grafo *g, const char *nomeArquivo) {
-    FILE *arq = fopen(nomeArquivo, "r");
+bool ler_arestas_csv(Grafo *g) {
+    FILE *arq = fopen("dados/arestas.csv", "r");
     if (!arq) return false;
 
     char linha[100];
