@@ -173,9 +173,9 @@ void busca(Grafo* g, int origem, int destino) {
     printf("\nSala de destino: %i", destino);
 
     if (origem == destino) {
-        printf("Origem e destino sao iguais!\n");
+        printf("\nOrigem e destino sao iguais!");
     } else if (distancia[destino] == -1) {
-        printf("Nao existe caminho para o destino.\n");
+        printf("\nNao existe caminho para o destino.");
     } else {
         printf("\nMenor caminho de %i para %i: ", origem, destino);
         imprimir_caminho(origem, destino, pai);

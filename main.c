@@ -66,7 +66,7 @@ int main() {
     Grafo *g = inicializa_grafo(tamanho);
     if (!ler_arestas_csv(g)) {
         printf("Nao foi possivel ler arquivo!");
-        return;
+        return -1;
     }
 
     printf("\n\n");
