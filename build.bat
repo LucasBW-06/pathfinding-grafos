@@ -1,1 +1,1 @@
-gcc main.c grafo.c db.c dijkstra.c gerar.c -o programa.exe
+gcc main.c grafo.c db.c pathfinder.c gerar.c -o programa.exe

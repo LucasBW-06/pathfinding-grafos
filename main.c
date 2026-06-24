@@ -1,6 +1,6 @@
 #include "grafo.h"
 #include "db.h"
-#include "dijkstra.h"
+#include "pathfinder.h"
 #include "gerar.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,7 +64,10 @@ int main() {
     fclose(vertices);
     
     Grafo *g = inicializa_grafo(tamanho);
-    ler_arestas_csv(g);
+    if (!ler_arestas_csv(g)) {
+        printf("Nao foi possivel ler arquivo!");
+        return;
+    }
 
     printf("\n\n");
     exibe_grafo(g);
@@ -88,5 +91,7 @@ int main() {
         }
     }
     printf("\n");
-    dijkstra(g, origem, destino);
+    busca(g, origem, destino);
+
+    libera_grafo(g);
 }
