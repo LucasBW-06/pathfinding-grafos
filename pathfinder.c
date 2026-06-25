@@ -143,13 +143,20 @@ void imprimir_caminho(int origem, int destino, int* pai) {
     printf("-> %d ", destino);
 }
 
-bool verificar_acesso(int tamanho, int* distancia) {
+void verificar_acesso(int tamanho, int* distancia) {
+    bool validade = true;
     for (int i = 0; i < tamanho; i++) {
         if (distancia[i] == -1) {
-            return false;
+            if (validade) {
+                validade = false;
+                printf("As seguintes salas sao inacessiveis partindo da origem:\n");
+            }
+            printf("> %d;\n", i);
         }
     }
-    return true;
+    if (validade) {
+        printf("Todas as salas sao alcancaveis partindo da origem.\n");
+    }
 }
 
 void busca(Grafo* g, int origem, int destino) {
@@ -163,11 +170,7 @@ void busca(Grafo* g, int origem, int destino) {
 
     dijkstra(g, origem, pai, distancia);
     
-    if (verificar_acesso(g->numVertices, distancia)) {
-        printf("Todas as salas sao alcancaveis.\n");
-    } else {
-        printf("Há paredes que bloqueiam caminhos para certas salas.\n");
-    }
+    verificar_acesso(g->numVertices, distancia);
 
     printf("\nSala de origem: %i", origem);
     printf("\nSala de destino: %i", destino);
