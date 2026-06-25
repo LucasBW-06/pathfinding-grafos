@@ -54,7 +54,7 @@ bool inserir_aresta(Grafo* g, int origem, int destino, int peso) {
 
 void exibe_grafo(Grafo* g) {
     if (!g) return;
-    printf("Imprimindo grafo (vertices: %i; arestas %i).\n", g->numVertices, g->numArestas);
+    printf("Imprimindo grafo (salas: %i; passagens: %i).\n", g->numVertices, g->numArestas);
     ElemLista* atual;
     for (int i = 0; i < g->numVertices; i++) {
         printf("\t%i :", i);
@@ -65,6 +65,7 @@ void exibe_grafo(Grafo* g) {
         }
         printf("\n");
     }
+    printf("Numero de salas: %i\nNumero de passagens: %i\n", g->numVertices, g->numArestas);
 }
 
 bool libera_grafo(Grafo* g) {
