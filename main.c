@@ -17,10 +17,10 @@ void preencher_form() {
             printf("Valor invalido, tente novamente.\n");
         }
     }
-    while (pesoMax < 0) {
+    while (pesoMax < 1) {
         printf("Digite a distancia maxima: ");
         scanf("%d", &pesoMax);
-        if (pesoMax < 0) {
+        if (pesoMax < 1) {
             printf("Valor invalido, tente novamente.\n");
         }
     }
